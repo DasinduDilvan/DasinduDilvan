@@ -1,176 +1,107 @@
-# Hey, I'm Dasindu Dilvan 👋
+# 👋 Hi, I'm Dasindu Dilvan
 
-### ICT Undergraduate • Cloud & Infrastructure • Network & Security • DevOps
+### `ICT Undergraduate` • `Cloud & Infrastructure` • `DevOps` • `Network & Security`
 
-I'm an **ICT undergraduate at the University of Ruhuna** who enjoys understanding how systems work from the ground up and turning that knowledge into practical projects.
-
-My main interests are **Cloud Infrastructure, Linux, Networking, Security, DevOps, Automation, and Full-Stack Development**.
-
-I learn by building things, breaking things, fixing things, and documenting what I discover along the way.
+<p align="left">
+  <a href="https://github.com/DasinduDilvan">
+    <img src="https://img.shields.io/github/followers/DasinduDilvan?label=Followers&style=for-the-badge&color=181717" />
+  </a>
+  <a href="https://github.com/DasinduDilvan?tab=repositories">
+    <img src="https://img.shields.io/badge/Repositories-Explore-2ea44f?style=for-the-badge" />
+  </a>
+</p>
 
 ---
 
 ## 🧑‍💻 About Me
 
-* 🎓 Bachelor of Information and Communication Technology undergraduate
-* ☁️ Exploring **AWS & Cloud Infrastructure**
-* 🐧 Working with **Linux, servers, networking & system administration**
-* 🔐 Building knowledge in **Network & Infrastructure Security**
-* ⚙️ Learning **DevOps, CI/CD & Infrastructure Automation**
-* 💻 Developing applications with **Java, C, JavaScript & MERN**
-* 🗄️ Working with **MySQL & MongoDB**
-* 🚀 Building and deploying practical projects
-* 📚 Currently focused on turning university knowledge into real-world skills
+🎓 ICT Undergraduate at **University of Ruhuna**
+
+I enjoy working at the intersection of **software, infrastructure, cloud, and security**.
+
+- ☁️ Learning **AWS & Cloud Infrastructure**
+- ⚙️ Exploring **DevOps & Automation**
+- 🔐 Building knowledge in **Network & Security**
+- 💻 Developing with **Java, C & MERN**
+- 🐧 Working with **Linux & Windows**
+- 🚀 Turning coursework and ideas into practical projects
+
+> **Learn → Build → Break → Fix → Improve**
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Cloud & Infrastructure
+### 💻 Development
+<p>
+  <img src="https://skillicons.dev/icons?i=java,c,js,nodejs,express,react,mongodb,mysql" />
+</p>
 
-`AWS` `EC2` `S3` `VPC` `IAM` `CloudWatch` `CloudFormation`
+### ☁️ Cloud & Infrastructure
+<p>
+  <img src="https://skillicons.dev/icons?i=aws,linux,nginx,docker,git,github,githubactions" />
+</p>
 
-### DevOps & Automation
-
-`Git` `GitHub` `GitHub Actions` `Linux` `Nginx` `PM2` `CI/CD`
-
-### Networking & Security
-
-`TCP/IP` `DNS` `Firewalls` `Network Troubleshooting` `Infrastructure Security`
-
-### Development
-
-`Java` `C` `JavaScript` `Node.js` `Express.js` `React` `MERN`
-
-### Databases
-
-`MySQL` `MongoDB` `MongoDB Atlas`
-
-### Tools & Environment
-
-`Ubuntu` `Windows` `IntelliJ IDEA` `VS Code` `GitHub`
+### 🔐 Networking & Security
+<p>
+  <img src="https://skillicons.dev/icons?i=linux,bash,powershell" />
+</p>
 
 ---
 
 ## 🚀 What I'm Building
 
-### ☁️ Cloud & Infrastructure
-
-Learning how modern applications are deployed, secured, monitored, and maintained in cloud environments.
-
-Currently exploring:
-
-* AWS infrastructure
-* EC2-based application deployment
-* IAM & access management
-* VPC & networking
-* S3
-* CloudWatch
-* Infrastructure as Code
-* DevOps workflows
-
-### 💻 Full-Stack Applications
-
-Building practical web applications using modern JavaScript technologies and cloud services.
-
-One of my projects is **Skillora**, a student/freelancer marketplace built around:
-
-`React` → `Node.js / Express` → `MongoDB` → `AWS` → `Vercel`
-
-### ☕ Java Applications
-
-Developing desktop applications using **Java, MySQL, Swing and FlatLaf** as part of my university coursework and group projects.
-
-### 🧩 Data Structures & Programming
-
-Strengthening my programming fundamentals through **C**, particularly:
-
-* Arrays
-* Structures
-* Pointers
-* Stacks
-* Queues
-* Circular Queues
-* Data manipulation
+| Project | Focus | Stack |
+|---|---|---|
+| 🎯 **Skillora** | Student/Freelancer Marketplace | MERN • AWS • MongoDB |
+| 🎓 **University Systems** | Academic Management | Java • MySQL |
+| 🧩 **DSA Projects** | Data Structures & Algorithms | C |
+| ☁️ **Cloud Projects** | Infrastructure & Deployment | AWS • Linux • DevOps |
 
 ---
 
-## 📌 Featured Areas
-
-| Area           | What I'm Working On                                |
-| -------------- | -------------------------------------------------- |
-| ☁️ Cloud       | AWS, cloud infrastructure & deployment             |
-| ⚙️ DevOps      | CI/CD, automation & deployment workflows           |
-| 🐧 Linux       | Servers, administration & troubleshooting          |
-| 🔐 Security    | Infrastructure & network security fundamentals     |
-| 🌐 Networking  | Network concepts, troubleshooting & infrastructure |
-| 💻 Development | Java, C, JavaScript & MERN                         |
-| 🗄️ Databases  | MySQL & MongoDB                                    |
-| 🚀 Projects    | University, personal & practical projects          |
-
----
-
-## 🔭 Currently Learning
+## 📚 Currently Learning
 
 ```text
-AWS
-Linux
-Cloud Infrastructure
-DevOps
-CI/CD
-Infrastructure as Code
-Network Security
-MERN Stack
-Java
-Data Structures & Algorithms
+AWS & Cloud Architecture
+        ↓
+Linux & Infrastructure
+        ↓
+DevOps & Automation
+        ↓
+Network & Security
+        ↓
+Full-Stack Development
 ```
+---
+
+## 📈 GitHub Activity
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=DasinduDilvan&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DasinduDilvan&layout=compact&theme=tokyonight&hide_border=true" height="165"/>
+</p>
 
 ---
 
-## 🧪 My Approach
+## 🌐 Connect
 
-> **Learn → Build → Break → Fix → Understand → Improve**
+<p>
+  <a href="https://www.linkedin.com/in/dasindudilvan/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
 
-I prefer practical learning over simply collecting technologies.
-
-Every project is an opportunity to understand something a little deeper, whether it's a data structure, an API, a database, a Linux server, a network, or a cloud deployment.
-
----
-
-## 📂 Repositories
-
-You'll find a mix of:
-
-* 🎓 University coursework
-* 💻 Software development projects
-* ☁️ Cloud & infrastructure experiments
-* ⚙️ DevOps and automation projects
-* 🔐 Security-related learning
-* 🧪 Technical experiments
-* 📚 Learning notes and practice code
-
----
-
-## 🌱 Long-Term Direction
-
-I'm working toward becoming a **Cloud / Infrastructure / DevOps Engineer** with strong foundations in **networking, security and software development**.
-
-The goal is simple:
-
-**Understand the technology. Build with it. Deploy it. Secure it. Automate it.**
-
----
-
-## 🤝 Connect & Follow My Work
-
-I'm always interested in learning from other developers, engineers and technology communities.
-
-If you're interested in **Cloud, Infrastructure, DevOps, Networking, Security or Software Development**, feel free to explore my repositories.
-
-### `BUILD • LEARN • AUTOMATE • SECURE`
+  <a href="https://github.com/DasinduDilvan">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
 
 ---
 
 <p align="center">
-  <sub>Built with curiosity, caffeine, Linux terminals and a lot of debugging. ☕🐧</sub>
+  <b>⚡ Learn. Build. Deploy. Improve.</b>
+</p>
+
+<p align="center">
+  <sub>© Dasindu Dilvan • Cloud • Infrastructure • DevOps • Security • Development</sub>
 </p>
