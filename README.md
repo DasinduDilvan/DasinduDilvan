@@ -78,8 +78,15 @@ Full-Stack Development
 ## 📈 GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DasinduDilvan&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DasinduDilvan&layout=compact&theme=tokyonight&hide_border=true" height="165"/>
+  <a href="https://github.com/DasinduDilvan">
+    <img src="https://img.shields.io/github/followers/DasinduDilvan?style=for-the-badge&logo=github&label=Followers"/>
+  </a>
+  <a href="https://github.com/DasinduDilvan?tab=repositories">
+    <img src="https://img.shields.io/badge/Repositories-View-181717?style=for-the-badge&logo=github"/>
+  </a>
+  <a href="https://github.com/DasinduDilvan?tab=stars">
+    <img src="https://img.shields.io/github/stars/DasinduDilvan?style=for-the-badge&logo=github&label=Stars"/>
+  </a>
 </p>
 
 ---
