@@ -60,21 +60,6 @@ I enjoy working at the intersection of **software, infrastructure, cloud, and se
 
 ---
 
-## 📚 Currently Learning
-
-```text
-AWS & Cloud Architecture
-        ↓
-Linux & Infrastructure
-        ↓
-DevOps & Automation
-        ↓
-Network & Security
-        ↓
-Full-Stack Development
-```
----
-
 ## 📈 GitHub Activity
 
 <p align="center">
@@ -93,7 +78,7 @@ Full-Stack Development
 
 ## 🌐 Connect
 
-<p>
+<p align="center">
   <a href="https://www.linkedin.com/in/dasindudilvan/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
