@@ -1,0 +1,292 @@
+
+/* GENERAL */
+
+.portfolio {
+  width: 100%;
+  overflow: hidden;
+}
+
+.section {
+  min-height: 80vh;
+  padding: 110px 8%;
+  scroll-margin-top: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.section-label {
+  color: #60a5fa;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 46px);
+  margin-bottom: 25px;
+}
+
+.section-title span {
+  color: #60a5fa;
+}
+
+.section-description {
+  max-width: 750px;
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+/* HOME */
+
+.home-section {
+  min-height: 100vh;
+  padding-top: 150px;
+  background: #080d18;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.hero-content h1 span {
+  color: #60a5fa;
+}
+
+.hero-content h2 {
+  color: #cbd5e1;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.hero-description {
+  max-width: 600px;
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  padding: 13px 23px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.primary-button {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  color: #ffffff;
+  border: 1px solid #475569;
+}
+
+.secondary-button:hover {
+  background: #1e293b;
+}
+
+/* ABOUT */
+
+.about-section {
+  background: #0d1524;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* PROJECTS */
+
+.projects-section {
+  background: #080d18;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* SKILLS */
+
+.skills-section {
+  background: #0d1524;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* COMMON CARDS */
+
+.content-card {
+  padding: 28px;
+  background: #111c2e;
+  border: 1px solid #263449;
+  border-radius: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.content-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-4px);
+}
+
+.content-card h3 {
+  color: #ffffff;
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.content-card h4 {
+  color: #60a5fa;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.content-card p {
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* PROJECT DETAILS */
+
+.project-number {
+  color: #60a5fa !important;
+  font-size: 12px !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.technology-list span {
+  padding: 7px 12px;
+  background: #1e293b;
+  color: #93c5fd;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+/* EXPERIENCE */
+
+.experience-section {
+  background: #080d18;
+}
+
+.experience-card {
+  max-width: 750px;
+}
+
+/* CONTACT */
+
+.contact-section {
+  min-height: 65vh;
+  background: #0d1524;
+}
+
+.contact-section .primary-button {
+  margin-top: 5px;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 25px 6%;
+  background: #080d18;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+}
+
+.footer p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 700px) {
+  .section {
+    padding: 90px 6%;
+  }
+
+  .home-section {
+    padding-top: 130px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .about-grid,
+  .project-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-card {
+    padding: 23px;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

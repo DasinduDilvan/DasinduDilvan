@@ -1,11 +1,20 @@
-import Image from "next/image";
 
-export default function Home() {
+import Home from "@/components/sections/home/Home";
+import About from "@/components/sections/about/About";
+import Projects from "@/components/sections/projects/Projects";
+import Skills from "@/components/sections/skills/Skills";
+import Experience from "@/components/sections/experience/Experience";
+import Contact from "@/components/sections/contact/Contact";
+
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <h1 className="text-3xl font-bold">
-        Dasindu Dilvan Wijethunga
-      </h1>
-    </div>
+    <main>
+      <Home />
+      <About />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
+    </main>
   );
 }
