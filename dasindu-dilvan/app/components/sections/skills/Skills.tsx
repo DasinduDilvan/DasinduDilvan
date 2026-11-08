@@ -1,57 +1,58 @@
-
+// app/components/sections/skills/Skills.tsx
+"use client";
+import { useEffect, useState } from "react";
 import "./Skills.css";
 
-const skillGroups = [
-  {
-    title: "Frontend Development",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "TypeScript"],
-  },
-  {
-    title: "Backend Development",
-    skills: ["Java", "Node.js", "REST APIs"],
-  },
-  {
-    title: "Database Management",
-    skills: ["MySQL", "Database Design", "SQL"],
-  },
-  {
-    title: "Development Tools",
-    skills: ["Git", "GitHub", "VS Code", "IntelliJ IDEA"],
-  },
-];
+interface SkillCategory {
+  id: string;
+  name: string;
+  skills: string[];
+}
+
+interface SkillsData {
+  heading: string;
+  subtitle: string;
+  categories: SkillCategory[];
+}
 
 export default function Skills() {
+  const [data, setData] = useState<SkillsData | null>(null);
+
+  useEffect(() => {
+    const load = () => {
+      const d = (window as any).portfolioData;
+      if (d) setData(d.skills);
+      else setTimeout(load, 100);
+    };
+    load();
+  }, []);
+
+  if (!data) return null;
+
   return (
-    <section id="skills" className="skills-section">
-      <div className="skills-container">
+    <section id="skills" className="section skills-section">
 
-        <p className="skills-label">MY TECHNICAL SKILLS</p>
+      {/* --- Section Header --- */}
+      <h2 className="section-heading">{data.heading}</h2>
+      <p className="section-subtitle">{data.subtitle}</p>
 
-        <h2 className="skills-title">
-          Technologies I <span>Use</span>
-        </h2>
+      {/* --- Skills Categories Grid --- */}
+      <div className="skills-grid">
+        {data.categories.map((cat) => (
+          <div key={cat.id} className="skill-category">
 
-        <p className="skills-description">
-          Technologies and tools I am learning and using
-          in software development.
-        </p>
+            {/* Category heading */}
+            <h3 className="skill-category-name">{cat.name}</h3>
 
-        <div className="skills-grid">
-          {skillGroups.map((group) => (
-            <div className="skill-card" key={group.title}>
-
-              <h3>{group.title}</h3>
-
-              <div className="skill-list">
-                {group.skills.map((skill) => (
-                  <span key={skill}>{skill}</span>
-                ))}
-              </div>
-
+            {/* Individual skill tags */}
+            <div className="skill-list">
+              {cat.skills.map((skill) => (
+                <span key={skill} className="skill-item">{skill}</span>
+              ))}
             </div>
-          ))}
-        </div>
 
+          </div>
+        ))}
       </div>
     </section>
   );

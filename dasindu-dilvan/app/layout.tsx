@@ -1,24 +1,28 @@
-
+// app/layout.tsx
+// Root layout – loads global styles and the data script
 import type { Metadata } from "next";
-import Navbar from "./components/layout/Navbar";
 import "./globals.css";
+import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Dasindu Dilvan | Developer Portfolio",
-  description: "Personal portfolio of Dasindu Dilvan Wijethunga.",
+  title: "Dasindu | Software Engineer",
+  description: "Professional portfolio of Dasindu – Software Engineer & Full-Stack Developer",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        {children}
-      </body>
+      <head>
+        {/* Load portfolio data globally so components can access it */}
+        <script src="/data.js" defer />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

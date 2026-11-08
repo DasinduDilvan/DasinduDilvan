@@ -1,6 +1,9 @@
-
+// app/components/layout/Navbar.tsx
+"use client";
+import { useState } from "react";
 import "./Navbar.css";
 
+// Navigation links – correspond to section IDs
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -11,50 +14,67 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  // Track mobile menu open/close state
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Close mobile menu when a link is clicked
+  const handleLinkClick = () => setMenuOpen(false);
+
   return (
     <header className="navbar">
       <nav className="navbar-container">
 
+        {/* --- LOGO --- */}
         <a href="#home" className="navbar-logo">
-          Dasindu<span>.</span>
+          Dasindu<span className="logo-dot">.</span>
         </a>
 
+        {/* --- DESKTOP NAV LINKS --- */}
         <div className="navbar-links">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href}>
+            <a key={link.name} href={link.href} className="nav-link">
               {link.name}
             </a>
           ))}
         </div>
 
+        {/* --- RESUME BUTTON (desktop) --- */}
         <a
-          href="/resume.pdf"
+          href="/cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-resume"
         >
-          Resume ↗
+          Resume
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
         </a>
 
-        <details className="mobile-menu">
-          <summary aria-label="Open navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </summary>
+        {/* --- MOBILE HAMBURGER BUTTON --- */}
+        <button
+          className={`mobile-toggle ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
 
-          <div className="mobile-menu-links">
+        {/* --- MOBILE DROPDOWN --- */}
+        {menuOpen && (
+          <div className="mobile-dropdown">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href}>
+              <a key={link.name} href={link.href} onClick={handleLinkClick}>
                 {link.name}
               </a>
             ))}
-
-            <a href="/resume.pdf" target="_blank">
+            <a href="/cv.pdf" target="_blank" onClick={handleLinkClick} className="mobile-resume">
               Resume ↗
             </a>
           </div>
-        </details>
+        )}
 
       </nav>
     </header>

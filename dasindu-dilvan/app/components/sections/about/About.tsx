@@ -1,49 +1,52 @@
-
+// app/components/sections/about/About.tsx
+"use client";
+import { useEffect, useState } from "react";
 import "./About.css";
 
+interface AboutData {
+  heading: string;
+  paragraphs: string[];
+  highlights: { label: string; value: string }[];
+}
+
 export default function About() {
+  const [data, setData] = useState<AboutData | null>(null);
+
+  useEffect(() => {
+    const load = () => {
+      const d = (window as any).portfolioData;
+      if (d) setData(d.about);
+      else setTimeout(load, 100);
+    };
+    load();
+  }, []);
+
+  if (!data) return null;
+
   return (
-    <section id="about" className="about-section">
-      <div className="about-container">
+    <section id="about" className="section about-section">
 
-        <p className="about-label">GET TO KNOW ME</p>
+      {/* --- Section Header --- */}
+      <h2 className="section-heading">{data.heading}</h2>
+      <p className="section-subtitle">A brief introduction about myself and my background.</p>
 
-        <h2 className="about-title">
-          About <span>Me</span>
-        </h2>
+      <div className="about-content">
 
-        <p className="about-description">
-          I'm Dasindu Dilvan Wijethunga, an ICT undergraduate
-          at the University of Ruhuna, Sri Lanka. I enjoy
-          learning new technologies and developing software
-          applications that solve real-world problems.
-        </p>
+        {/* --- Description Paragraphs --- */}
+        <div className="about-text">
+          {data.paragraphs.map((p, i) => (
+            <p key={i} className="about-paragraph">{p}</p>
+          ))}
+        </div>
 
-        <div className="about-grid">
-
-          <div className="about-card">
-            <h3>Who I Am</h3>
-
-            <p>
-              I am interested in full-stack development,
-              software engineering, database management,
-              and modern web technologies.
-            </p>
-          </div>
-
-          <div className="about-card">
-            <h3>My Education</h3>
-
-            <h4>University of Ruhuna</h4>
-
-            <p>
-              Bachelor of Information and Communication
-              Technology
-            </p>
-
-            <p>Faculty of Technology</p>
-          </div>
-
+        {/* --- Highlight Stats --- */}
+        <div className="about-highlights">
+          {data.highlights.map((h, i) => (
+            <div key={i} className="highlight-card">
+              <span className="highlight-value">{h.value}</span>
+              <span className="highlight-label">{h.label}</span>
+            </div>
+          ))}
         </div>
 
       </div>

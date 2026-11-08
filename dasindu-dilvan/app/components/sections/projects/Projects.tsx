@@ -1,72 +1,85 @@
-
+// app/components/sections/projects/Projects.tsx
+"use client";
+import { useEffect, useState } from "react";
 import "./Projects.css";
 
-const projects = [
-  {
-    number: "01",
-    name: "UniMIS",
-    description:
-      "A Faculty Academic Management Information System developed to manage academic records and university activities.",
-    technologies: ["Java", "MySQL", "JDBC", "Java Swing"],
-  },
-  {
-    number: "02",
-    name: "Personal Portfolio",
-    description:
-      "A personal portfolio website to showcase my projects, technical skills, and development journey.",
-    technologies: ["Next.js", "TypeScript", "CSS"],
-  },
-  {
-    number: "03",
-    name: "Upcoming Project",
-    description:
-      "A new software development project that I am planning to build.",
-    technologies: ["Next.js", "Database"],
-  },
-];
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  liveUrl: string;
+  githubUrl: string;
+}
+
+interface ProjectsData {
+  heading: string;
+  subtitle: string;
+  items: Project[];
+}
 
 export default function Projects() {
+  const [data, setData] = useState<ProjectsData | null>(null);
+
+  useEffect(() => {
+    const load = () => {
+      const d = (window as any).portfolioData;
+      if (d) setData(d.projects);
+      else setTimeout(load, 100);
+    };
+    load();
+  }, []);
+
+  if (!data) return null;
+
   return (
-    <section id="projects" className="projects-section">
-      <div className="projects-container">
+    <section id="projects" className="section projects-section">
 
-        <p className="projects-label">MY WORK</p>
+      {/* --- Section Header --- */}
+      <h2 className="section-heading">{data.heading}</h2>
+      <p className="section-subtitle">{data.subtitle}</p>
 
-        <h2 className="projects-title">
-          Featured <span>Projects</span>
-        </h2>
+      {/* --- Projects Grid --- */}
+      <div className="projects-grid">
+        {data.items.map((project) => (
+          <article key={project.id} className="project-card">
 
-        <p className="projects-description">
-          Here are some of the projects I have developed
-          and worked on.
-        </p>
+            {/* Project image placeholder */}
+            <div className="project-image">
+              <img src={project.image} alt={project.title} />
+              <div className="project-image-fallback">{project.title[0]}</div>
+            </div>
 
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <div className="project-card" key={project.number}>
+            {/* Project details */}
+            <div className="project-info">
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-desc">{project.description}</p>
 
-              <p className="project-number">
-                PROJECT {project.number}
-              </p>
-
-              <h3>{project.name}</h3>
-
-              <p className="project-description">
-                {project.description}
-              </p>
-
-              <div className="project-technologies">
-                {project.technologies.map((technology) => (
-                  <span key={technology}>
-                    {technology}
-                  </span>
+              {/* Technology tags */}
+              <div className="project-tags">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="tag">{tag}</span>
                 ))}
               </div>
 
+              {/* Links */}
+              <div className="project-links">
+                {project.liveUrl && (
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link">
+                    Live Demo ↗
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link">
+                    Source Code ↗
+                  </a>
+                )}
+              </div>
             </div>
-          ))}
-        </div>
 
+          </article>
+        ))}
       </div>
     </section>
   );

@@ -1,68 +1,75 @@
-
+// app/components/sections/experience/Experience.tsx
+"use client";
+import { useEffect, useState } from "react";
 import "./Experience.css";
 
-const experiences = [
-  {
-    category: "EDUCATION",
-    title: "Bachelor of Information and Communication Technology",
-    organization: "University of Ruhuna",
-    description:
-      "Studying information and communication technology with an interest in software engineering, programming, and database management.",
-    period: "Current",
-  },
-  {
-    category: "PROJECT EXPERIENCE",
-    title: "UniMIS - Academic Management System",
-    organization: "University Mini Project",
-    description:
-      "Worked on a Java and MySQL desktop application for managing faculty academic information, including users, courses, marks, and attendance.",
-    period: "2026",
-  },
-];
+interface ExperienceItem {
+  id: string;
+  role: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string[];
+}
+
+interface ExperienceData {
+  heading: string;
+  subtitle: string;
+  items: ExperienceItem[];
+}
 
 export default function Experience() {
+  const [data, setData] = useState<ExperienceData | null>(null);
+
+  useEffect(() => {
+    const load = () => {
+      const d = (window as any).portfolioData;
+      if (d) setData(d.experience);
+      else setTimeout(load, 100);
+    };
+    load();
+  }, []);
+
+  if (!data) return null;
+
   return (
-    <section id="experience" className="experience-section">
-      <div className="experience-container">
+    <section id="experience" className="section experience-section">
 
-        <p className="experience-label">MY JOURNEY</p>
+      {/* --- Section Header --- */}
+      <h2 className="section-heading">{data.heading}</h2>
+      <p className="section-subtitle">{data.subtitle}</p>
 
-        <h2 className="experience-title">
-          Education & <span>Experience</span>
-        </h2>
+      {/* --- Timeline --- */}
+      <div className="timeline">
+        {data.items.map((exp) => (
+          <div key={exp.id} className="timeline-item">
 
-        <p className="experience-description">
-          My academic background and development experience.
-        </p>
+            {/* Timeline dot */}
+            <div className="timeline-dot" />
 
-        <div className="experience-list">
-          {experiences.map((item) => (
-            <div className="experience-item" key={item.title}>
-
-              <div className="experience-marker"></div>
-
-              <div className="experience-card">
-
-                <p className="experience-category">
-                  {item.category}
-                </p>
-
-                <h3>{item.title}</h3>
-
-                <h4>{item.organization}</h4>
-
-                <p>{item.description}</p>
-
-                <span className="experience-period">
-                  {item.period}
-                </span>
-
+            {/* Content card */}
+            <div className="timeline-card">
+              <div className="timeline-header">
+                <div>
+                  <h3 className="timeline-role">{exp.role}</h3>
+                  <p className="timeline-company">{exp.company}</p>
+                </div>
+                <div className="timeline-meta">
+                  <span className="timeline-period">{exp.period}</span>
+                  <span className="timeline-location">{exp.location}</span>
+                </div>
               </div>
 
+              {/* Responsibilities */}
+              <ul className="timeline-desc">
+                {exp.description.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
 
+          </div>
+        ))}
       </div>
     </section>
   );
